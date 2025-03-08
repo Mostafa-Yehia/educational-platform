@@ -19,6 +19,9 @@ The front-end of the global educational platform is a Single Page Application (S
 - S3 Storage: Stores the SPA and related static files (HTML, CSS, JavaScript, images).
 - Scalable: S3 automatically scales to handle growing content and user traffic.
 - Public Access: S3 is configured with public read permissions for static assets, which are cached via CloudFront.
+- Storage Class: Using Intelligent-Tiering / Glacier could be used for less frequently accessed content achieving cost optimization.
+- DR: Backing up the bucket for disaster recovery.
+- KMS Encryption: Object encryption to satisfy compliance requirements, protecting user data at-rest.
 ### 2.2. CloudFront for Global Content Delivery
 - Global Caching: CloudFront caches content at edge locations, reducing latency by serving assets from the nearest region (e.g., Bahrain for Saudi users, U.S. East for U.S. users).
 - Fast Delivery: Static assets like images, CSS, and JavaScript are delivered quickly via CloudFront’s CDN.
@@ -27,4 +30,4 @@ The front-end of the global educational platform is a Single Page Application (S
 - DNS Routing: Route 53 maps the domain name (e.g., www.domain-name.com) to the CloudFront distribution.
 - Latency-Based Routing: Automatically routes users to the nearest CloudFront edge location to minimize load times and improve performance.
 ### 2.4. ACM for HTTPS Encryption
-- SSL/TLS: SSL certificates managed by AWS Certificate Manager (ACM) ensure secure HTTPS communication between users and CloudFront, protecting user data during transmission.
+- SSL/TLS: SSL certificates managed by AWS Certificate Manager (ACM) ensure secure HTTPS communication between users and CloudFront, protecting user data in-transit.
