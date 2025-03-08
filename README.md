@@ -12,6 +12,8 @@ The front-end of the global educational platform is a Single Page Application (S
 - ACM: Secures communication over HTTPS.
 - IAM: Access & security of resources.
 
+![frontend diagram](/diagrams/frontend.png)
+
 ## 2. Front-End Deployment Components
 ### 2.1. S3 for Static Website Hosting
 - S3 Storage: Stores the SPA and related static files (HTML, CSS, JavaScript, images).
