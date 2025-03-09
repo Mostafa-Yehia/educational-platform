@@ -64,6 +64,9 @@ Leveraging Virtual Private Cloud (VPC) to ensure network isolation, with securit
 - Security Groups: Controls inbound/outbound traffic to EC2 instances and ALB.
 - ACM: Ensures secure HTTPS communication.
 - IAM: Secures access to AWS resources.
+- Shield & WAF: For web app protection.
+
+![backend diagram](/diagrams/backend-php-app.png)
   
 ## 2. Back-End: PHP App Deployment Components
 ### 2.1. EC2 Instances and Auto Scaling Group (ASG)
