@@ -38,7 +38,8 @@ This document provides an overview of the architectural design for a globally ac
 - **Amazon CloudFront** distributes video content globally for minimal latency.
 
 ### 5. **Security & Compliance**
-- **AWS Web Application Firewall (WAF)** for DDoS protection.
+- **AWS WAF** additional layer of security by filtering out malicious traffic and protecting against common threats like SQL injection, XSS, and others.
+- **AWS Shield** protect CloudFront distribution & Route 53 from DDoS attacks.
 - **IAM Role-based Access Control (RBAC)** ensures least privilege access.
 - **Encryption**
   - Data in transit secured with TLS (AWS Certificate Manager).
