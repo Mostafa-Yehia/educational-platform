@@ -38,6 +38,8 @@ This document provides an overview of the architectural design for a globally ac
 - **Amazon S3**
   - Regional buckets for user-generated content.
   - Video content stored globally with optimized delivery.
+- **ECR**
+  - Storing container images used by EKS microservices.
 
 ### 4. **Media Processing & Global Delivery**
 - **AWS MediaConvert** converts uploaded videos into optimized formats.
@@ -50,7 +52,7 @@ This document provides an overview of the architectural design for a globally ac
 - **VPC Peering** when cross-region communication is required.
 - **AWS WAF** additional layer of security by filtering out malicious traffic and protecting against common threats like SQL injection, XSS, and others.
 - **AWS Shield** protect CloudFront distribution & Route 53 from DDoS attacks.
-- **IAM Role-based Access Control (RBAC)** ensures least privilege access.
+- **IAM Role-based Access Control (RBAC)** ensures least privilege access for all AWS resources & services.
 - **Encryption**
   - Data in transit secured with TLS (AWS Certificate Manager).
   - Data at rest encrypted using AWS KMS.
@@ -64,6 +66,8 @@ This document provides an overview of the architectural design for a globally ac
   - AWS CloudTrail can be used for operational and risk auditing, governance, and compliance.
 - **AWS Secrets Manager**
   - Storing secrets / credentials / tokens / and other sensitive data.
+- **ECR Scanning**
+  - Identifying software vulnerabilities in container images.
 
 ### 6. **Scalability & Optimization**
 - **Auto Scaling Groups** ensure EC2 instances adapt to traffic spikes.
